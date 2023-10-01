@@ -1,35 +1,39 @@
 import React from 'react';
 import Project from './Project';
+import Wimg from '../assets/Weather.png';
+import Simg from '../assets/WDS.png';
+import NAimg from '../assets/Note.png'
+import Eimg from '../assets/EDB.png';
 
 function Portfolio() {
     const projects = [
         { 
-            title: 'Project 1',
-            skills: 'Skill 1, Skill 2',
-            imageSrc: 'image.jpg', 
-            deployedLink: '', 
-            repoLink: ''
+            title: 'Weather Dashboard',
+            skills: 'Server-Side APIs',
+            imageSrc: {Wimg}, 
+            deployedLink: 'https://liam04290.github.io/Weather-App/', 
+            repoLink: 'https://github.com/liam04290/Weather-App'
         },
         { 
-            title: 'Project 2',
-            skills: 'Skill 3, Skill 4',
-            imageSrc: 'image.jpg', 
-            deployedLink: '', 
-            repoLink: ''
+            title: 'Work Day Scheduler',
+            skills: '3rd Party APIs, Local Storage',
+            imageSrc: {Simg}, 
+            deployedLink: 'https://liam04290.github.io/Work-Day-Scheduler/', 
+            repoLink: 'https://github.com/liam04290/Work-Day-Scheduler'
         },
         { 
-            title: 'Project 3',
-            skills: 'Skill 5, Skill 6',
-            imageSrc: 'image.jpg', 
-            deployedLink: '', 
-            repoLink: ''
+            title: 'Notes App',
+            skills: 'Express.js, Node.js',
+            imageSrc: {NAimg}, 
+            deployedLink: 'https://mighty-meadow-68985-6ddd65db757c.herokuapp.com/', 
+            repoLink: 'https://github.com/liam04290/Notes-App'
         },
         { 
-            title: 'Project 4',
-            skills: 'Skill 7, Skill 8',
-            imageSrc: 'image.jpg', 
-            deployedLink: '', 
-            repoLink: ''
+            title: 'Employee Databse Management System',
+            skills: 'SQL, Node.js',
+            imageSrc: {Eimg}, 
+            deployedLink: 'https://drive.google.com/file/d/1c39HzBRXkIXc5y9EyRrGICaYQiMOUV8_/view', 
+            repoLink: 'https://github.com/liam04290/Employee-Database-Manager'
         },
     ];
 
