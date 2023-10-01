@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,35 +10,20 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        
-        <main>
-          <Switch>
-            {}
-            <Route exact path="/">
-              <Redirect to="/about" />
-            </Route>
-
-            {}
-            <Route path="/about" component={AboutMe} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/resume" component={Resume} />
-
-            {}
-            <Route path="*">
-              <Redirect to="/about" />
-            </Route>
-          </Switch>
-        </main>
-
-        <Footer />
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Header />
+                <Routes>
+                    <Route path="/" element={<AboutMe />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/resume" element={<Resume />} />
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
 
 export default App;
