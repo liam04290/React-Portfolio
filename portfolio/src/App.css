@@ -1,4 +1,9 @@
-.navigation .active {
+.navigation .active-link {
     font-weight: bold;
-    color: aquamarine;
+    color: red;
+}
+
+.header {
+    font-weight: bold;
+    color: red;
 }
