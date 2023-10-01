@@ -19,12 +19,14 @@ function Resume() {
 
     return (
         <section className="resume">
-            <h2>Proficiencies</h2>
-            <ul>
-                {proficiencies.map((language, index) => (
-                    <li key={index}>{language}</li>
-                ))}
-            </ul>
+            <div className="proficiencies">
+                <h2>Proficiencies</h2>
+                <ul>
+                    {proficiencies.map((language, index) => (
+                        <li key={index}>{language}</li>
+                    ))}
+                </ul>
+            </div>
         </section>
     );
 }
