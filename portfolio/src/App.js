@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 
+import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutMe from './components/AboutMe';
@@ -9,35 +10,30 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        
-        <main>
-          <Switch>
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/resume">Resume</Link>
             {}
-            <Route exact path="/">
-              <Redirect to="/about" />
-            </Route>
-
+          </nav>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/resume" element={<Resume />} />
             {}
-            <Route path="/about" component={AboutMe} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/resume" component={Resume} />
-
-            {}
-            <Route path="*">
-              <Redirect to="/about" />
-            </Route>
-          </Switch>
-        </main>
-
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    );
+  }
 
 export default App;

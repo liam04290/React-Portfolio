@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Contact = () => {
+const Home = () => {
   return (
     <header>
-      Placeholder Contact
+      Placeholder Home
     </header>
   );
 };
 
-export default Contact;
+export default Home;
