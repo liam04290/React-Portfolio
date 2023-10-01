@@ -22,4 +22,6 @@ Built using React and serves as a digital business card to display information a
 
 ## Link:
 
+
 ## Images:
+<img width="890" alt="Screenshot 2023-10-01 at 6 05 17 PM" src="https://github.com/liam04290/React-Portfolio/assets/106037383/81eb09fa-2349-4662-8759-5028c46cc77e">
